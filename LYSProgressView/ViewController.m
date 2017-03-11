@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "LYSWaveProgressView.h"
 #import "LYSCircleProgressView.h"
+#import "LYSCircleTwoProgressView.h"
 
 @interface ViewController (){
     
@@ -17,6 +18,7 @@
 @end
 
 @implementation ViewController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,6 +36,11 @@
     _circleProgressView.percenLBColor = [UIColor redColor];
     [self.view addSubview:_circleProgressView];
     
+    LYSCircleTwoProgressView *view1 = [[LYSCircleTwoProgressView alloc]initWithXOffset:50 yoffset:350 itemSize:80];
+    view1.backgroundColor = [UIColor clearColor];
+    view1.lineWidth = 20.f;
+    view1.progress = 0.4;
+    [self.view addSubview:view1];
     
 }
 
