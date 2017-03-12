@@ -13,6 +13,9 @@
 #pragma mark - 未完成时线的颜色
 @property(nonatomic,strong)UIColor *unfinishedColor;
 
+#pragma mark - 外面线框的颜色
+@property(nonatomic,strong)UIColor *outerLineColor;
+
 #pragma mark - 线条的宽度
 @property(nonatomic,assign)CGFloat lineWidth;
 

@@ -14,6 +14,8 @@
 
 @property(nonatomic,strong)CAShapeLayer *circleLayer;
 
+@property(nonatomic,strong)CAShapeLayer *outerCircleLayer;
+
 @end
 
 @implementation LYSCircleTwoProgressView
@@ -35,6 +37,7 @@
 -(void)setLineWidth:(CGFloat)lineWidth{
     _lineWidth = lineWidth;
     self.circleLayer.lineWidth = self.lineWidth;
+    self.outerCircleLayer.lineWidth = self.lineWidth + 1.f;
     self.circleLayer.path = [self myPath:_lineWidth startAngle: circleStartAngle progress:_progress].CGPath;
 }
 
@@ -58,12 +61,35 @@
     return _circleLayer;
 }
 
+-(void)setOuterLineColor:(UIColor *)outerLineColor{
+    _outerLineColor = outerLineColor;
+    self.outerCircleLayer.strokeColor = _outerLineColor.CGColor;
+}
+
+-(CAShapeLayer*)outerCircleLayer{
+    if (!_outerCircleLayer) {
+        _outerCircleLayer = [CAShapeLayer layer];
+        CGFloat radius = (MIN(self.bounds.size.width, self.bounds.size.height)) * 0.5;
+        UIBezierPath *path = [UIBezierPath bezierPath];
+        [path addArcWithCenter:(CGPoint){self.bounds.size.width * 0.5, self.bounds.size.height * 0.5} radius:radius startAngle:0 endAngle:2 * M_PI clockwise:YES];
+        _outerCircleLayer.path = path.CGPath;
+        _outerCircleLayer.lineWidth = self.lineWidth + 1;
+        _outerCircleLayer.strokeStart = 0;
+        _outerCircleLayer.strokeEnd = 1.0;
+        _outerCircleLayer.fillColor = [UIColor clearColor].CGColor;
+        _outerCircleLayer.strokeColor = self.outerLineColor.CGColor;
+        _outerCircleLayer.lineJoin = kCALineJoinRound;
+        _outerCircleLayer.lineCap = kCALineCapRound;
+    }
+    return _outerCircleLayer;
+
+}
+
 -(UIBezierPath *)myPath:(CGFloat)lineW startAngle:(CGFloat)startAngle progress:(CGFloat)circleProgress{
     CGFloat radius = (MIN(self.bounds.size.width, self.bounds.size.height) - lineW) * 0.5;
     UIBezierPath *path = [UIBezierPath bezierPath];
     [path moveToPoint:CGPointMake(self.frame.size.width / 2 , self.frame.size.height / 2 )];
     [path addArcWithCenter:(CGPoint){self.bounds.size.width * 0.5, self.bounds.size.height * 0.5} radius:radius startAngle:1.5 * M_PI endAngle:1.5 * M_PI + 2 * M_PI * circleProgress clockwise:YES];
-//    [UIBezierPath bezierPathWithArcCenter:  radius:radius startAngle: 0 endAngle: 2 * M_PI * circleProgress clockwise:YES];
     return path;
 }
 
@@ -77,6 +103,7 @@
     _unfinishedColor = [UIColor colorWithRed:0/255.0 green:191/255.0 blue:255/255.0 alpha:1];
     
     [self.layer addSublayer:self.circleLayer];
+    [self.layer addSublayer:self.outerCircleLayer];
     
     self.layer.cornerRadius = self.frame.size.height / 2;
     
