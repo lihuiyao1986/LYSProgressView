@@ -10,12 +10,14 @@
 #import "LYSWaveProgressView.h"
 #import "LYSCircleProgressView.h"
 #import "LYSCircleTwoProgressView.h"
+#import "LYSHorizontalProgressView.h"
 
 @interface ViewController (){
     NSTimer *_timer;
     LYSWaveProgressView *_waveProgressView;
     LYSCircleProgressView *_circleProgressView;
     LYSCircleTwoProgressView *view1;
+    LYSHorizontalProgressView *view2;
 }
 
 @end
@@ -48,6 +50,18 @@
 //    view1.progress = 0.4;
     [self.view addSubview:view1];
     
+    view2 = [[LYSHorizontalProgressView alloc]initWithFrame:CGRectMake(80, CGRectGetMaxY(view1.frame) + 20, self.view.frame.size.width - 160, 30)];
+    view2.backgroundColor = [UIColor colorWithRed:0/255.0 green:191/255.0 blue:255/255.0 alpha:1];
+    view2.backgroundColor = [UIColor clearColor];
+    view2.yoffset = 10.f;
+//    view2.backgroundColor = [UIColor redColor];
+    view2.outerLineW = 2.f;
+    view2.xoffset = 15.f;
+//    view2.layer.borderWidth = 1;
+//    view2.progress = 0.3;
+    //    view1.progress = 0.4;
+    [self.view addSubview:view2];
+    
 }
 
 - (void)addTimer
@@ -61,12 +75,14 @@
     _waveProgressView.progress += 0.01;
     _circleProgressView.progress += 0.01;
     view1.progress += 0.01;
+    view2.progress += 0.01;
     
     if (_waveProgressView.progress >= 1) {
 //        [self removeTimer];
         _waveProgressView.progress = 0.01;
         _circleProgressView.progress = 0.01;
         view1.progress = 0.01;
+        view2.progress = 0.01;
         NSLog(@"完成");
     }
 }
