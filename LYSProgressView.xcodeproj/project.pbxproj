@@ -17,6 +17,7 @@
 		486A9B661E728D6D0070D6F1 /* LYSCircleProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 486A9B651E728D6D0070D6F1 /* LYSCircleProgressView.m */; };
 		486A9B691E728D870070D6F1 /* LYSHorizontalProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 486A9B681E728D870070D6F1 /* LYSHorizontalProgressView.m */; };
 		4882E2271E74420A006F2CC7 /* LYSCircleTwoProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4882E2261E74420A006F2CC7 /* LYSCircleTwoProgressView.m */; };
+		48F755271E7EBC4F001CAD89 /* LYSCircleThreeProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F755261E7EBC4F001CAD89 /* LYSCircleThreeProgressView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		486A9B681E728D870070D6F1 /* LYSHorizontalProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYSHorizontalProgressView.m; sourceTree = "<group>"; };
 		4882E2251E74420A006F2CC7 /* LYSCircleTwoProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYSCircleTwoProgressView.h; sourceTree = "<group>"; };
 		4882E2261E74420A006F2CC7 /* LYSCircleTwoProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYSCircleTwoProgressView.m; sourceTree = "<group>"; };
+		48F755251E7EBC4F001CAD89 /* LYSCircleThreeProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYSCircleThreeProgressView.h; sourceTree = "<group>"; };
+		48F755261E7EBC4F001CAD89 /* LYSCircleThreeProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYSCircleThreeProgressView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,8 @@
 				486A9B681E728D870070D6F1 /* LYSHorizontalProgressView.m */,
 				4882E2251E74420A006F2CC7 /* LYSCircleTwoProgressView.h */,
 				4882E2261E74420A006F2CC7 /* LYSCircleTwoProgressView.m */,
+				48F755251E7EBC4F001CAD89 /* LYSCircleThreeProgressView.h */,
+				48F755261E7EBC4F001CAD89 /* LYSCircleThreeProgressView.m */,
 			);
 			path = LYSProgressView;
 			sourceTree = "<group>";
@@ -180,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				486A9B511E728D270070D6F1 /* ViewController.m in Sources */,
+				48F755271E7EBC4F001CAD89 /* LYSCircleThreeProgressView.m in Sources */,
 				4882E2271E74420A006F2CC7 /* LYSCircleTwoProgressView.m in Sources */,
 				486A9B4E1E728D270070D6F1 /* AppDelegate.m in Sources */,
 				486A9B4B1E728D270070D6F1 /* main.m in Sources */,
