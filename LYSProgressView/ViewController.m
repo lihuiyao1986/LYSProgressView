@@ -12,6 +12,7 @@
 #import "LYSCircleTwoProgressView.h"
 #import "LYSHorizontalProgressView.h"
 #import "LYSCircleThreeProgressView.h"
+#import "LYSCircleFourProgressView.h"
 
 @interface ViewController (){
     NSTimer *_timer;
@@ -20,6 +21,7 @@
     LYSCircleTwoProgressView *view1;
     LYSHorizontalProgressView *view2;
     LYSCircleThreeProgressView *view3;
+    LYSCircleFourProgressView *view4;
 }
 
 @end
@@ -67,9 +69,16 @@
     view3 = [[LYSCircleThreeProgressView alloc]initWithXOffset:80 yoffset:CGRectGetMaxY(view2.frame) + 20 itemSize:80];
 //    view3.layer.borderWidth = 1;
     view3.lineW = 5.f;
-    view3.highlightedColor = [UIColor redColor];
+//    view3.highlightedColor = [UIColor redColor];
     view3.duration = 1.5f;
     [self.view addSubview:view3];
+    
+    view4 = [[LYSCircleFourProgressView alloc]initWithXOffset:80 yoffset:CGRectGetMaxY(view3.frame) + 20 itemSize:80];
+    //    view3.layer.borderWidth = 1;
+    view4.lineW = 5.f;
+    //    view3.highlightedColor = [UIColor redColor];
+    view4.duration = 1.0f;
+    [self.view addSubview:view4];
 }
 
 - (void)addTimer
@@ -85,6 +94,7 @@
     view1.progress += 0.01;
     view2.progress += 0.01;
     view3.progress += 0.01;
+    view4.progress += 0.01;
     
     if (_waveProgressView.progress >= 1) {
 //        [self removeTimer];
@@ -93,6 +103,7 @@
         view1.progress = 0.01;
         view2.progress = 0.01;
         view3.progress = 0.01;
+        view4.progress = 0.01;
         NSLog(@"完成");
     }
 }

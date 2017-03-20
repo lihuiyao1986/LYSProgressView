@@ -18,6 +18,7 @@
 		486A9B691E728D870070D6F1 /* LYSHorizontalProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 486A9B681E728D870070D6F1 /* LYSHorizontalProgressView.m */; };
 		4882E2271E74420A006F2CC7 /* LYSCircleTwoProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4882E2261E74420A006F2CC7 /* LYSCircleTwoProgressView.m */; };
 		48F755271E7EBC4F001CAD89 /* LYSCircleThreeProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F755261E7EBC4F001CAD89 /* LYSCircleThreeProgressView.m */; };
+		48F7552A1E7EDEF4001CAD89 /* LYSCircleFourProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F755291E7EDEF4001CAD89 /* LYSCircleFourProgressView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,8 @@
 		4882E2261E74420A006F2CC7 /* LYSCircleTwoProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYSCircleTwoProgressView.m; sourceTree = "<group>"; };
 		48F755251E7EBC4F001CAD89 /* LYSCircleThreeProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYSCircleThreeProgressView.h; sourceTree = "<group>"; };
 		48F755261E7EBC4F001CAD89 /* LYSCircleThreeProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYSCircleThreeProgressView.m; sourceTree = "<group>"; };
+		48F755281E7EDEF4001CAD89 /* LYSCircleFourProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYSCircleFourProgressView.h; sourceTree = "<group>"; };
+		48F755291E7EDEF4001CAD89 /* LYSCircleFourProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYSCircleFourProgressView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +111,8 @@
 				4882E2261E74420A006F2CC7 /* LYSCircleTwoProgressView.m */,
 				48F755251E7EBC4F001CAD89 /* LYSCircleThreeProgressView.h */,
 				48F755261E7EBC4F001CAD89 /* LYSCircleThreeProgressView.m */,
+				48F755281E7EDEF4001CAD89 /* LYSCircleFourProgressView.h */,
+				48F755291E7EDEF4001CAD89 /* LYSCircleFourProgressView.m */,
 			);
 			path = LYSProgressView;
 			sourceTree = "<group>";
@@ -144,7 +149,7 @@
 					486A9B451E728D270070D6F1 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 4CX6972XTR;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -184,6 +189,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48F7552A1E7EDEF4001CAD89 /* LYSCircleFourProgressView.m in Sources */,
 				486A9B511E728D270070D6F1 /* ViewController.m in Sources */,
 				48F755271E7EBC4F001CAD89 /* LYSCircleThreeProgressView.m in Sources */,
 				4882E2271E74420A006F2CC7 /* LYSCircleTwoProgressView.m in Sources */,
@@ -238,7 +244,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: An Huang (DH837PH54F)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: An Huang (DH837PH54F)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -260,6 +267,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "bc36c191-aa95-4ccf-b86d-5f8a880ba3ee";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -286,7 +294,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: GOLDCARD HIGH-TECH CO.,LTD. (4CX6972XTR)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: GOLDCARD HIGH-TECH CO.,LTD. (4CX6972XTR)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -301,6 +310,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "07e22250-632e-4654-8a88-446048fd3922";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -315,8 +325,10 @@
 				INFOPLIST_FILE = LYSProgressView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lys.test.LYSProgressView;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.petrochina-qionghai.GasTreasure";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "bc36c191-aa95-4ccf-b86d-5f8a880ba3ee";
+				PROVISIONING_PROFILE_SPECIFIER = "petrolchina-qionghai-dev";
 			};
 			name = Debug;
 		};
@@ -328,8 +340,10 @@
 				INFOPLIST_FILE = LYSProgressView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lys.test.LYSProgressView;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.petrochina-qionghai.GasTreasure";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "dfd0149a-46d5-48ee-bfeb-4491b33d2623";
+				PROVISIONING_PROFILE_SPECIFIER = "petrolchina-qionghai-adhoc";
 			};
 			name = Release;
 		};
